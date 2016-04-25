@@ -2,6 +2,14 @@
   "name": "generator-ju",
   "version": "1.0.0",
   "description": "Ju framework generator for web apps",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpgarbanzo/generator-ju.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jpgarbanzo/generator-ju/issues"
+  },
+  "homepage": "https://github.com/jpgarbanzo/generator-ju#readme",
   "files": [
     "generators/app"
   ],

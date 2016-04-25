@@ -4,12 +4,12 @@
   "description": "Ju framework generator for web apps",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpgarbanzo/generator-ju.git"
+    "url": "git+https://github.com/hulilabs/generator-ju.git"
   },
   "bugs": {
-    "url": "https://github.com/jpgarbanzo/generator-ju/issues"
+    "url": "https://github.com/hulilabs/generator-ju/issues"
   },
-  "homepage": "https://github.com/jpgarbanzo/generator-ju#readme",
+  "homepage": "https://github.com/hulilabs/generator-ju#readme",
   "files": [
     "generators/app"
   ],

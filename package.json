@@ -1,0 +1,16 @@
+{
+  "name": "generator-ju",
+  "version": "1.0.0",
+  "description": "Ju framework generator for web apps",
+  "files": [
+    "generators/app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "jpgarbanzo",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.22.6"
+  }
+}

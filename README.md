@@ -21,6 +21,13 @@ We provide a [docker](https://www.docker.com/) container with [nginx](https://ww
 ```
 docker-compose up -d
 ```
-4. If everything was fine, you can go to [http://localhost:8080](http://localhost:8080) and you should see a message saying "nihao Ju!"
+
+## Getting started
+If the installation was fine, you can go to [http://localhost:8080](http://localhost:8080) and you should see a message saying "nihao Ju!".
 
 Please note that you can also test your app by opening the `index.html` file located at `your_project_root/public`, but you won't be able to dynamically load resources.
+
+Refer to the Github repositories of Ju framework for details about app development:
+* [ju-shared](https://github.com/hulilabs/ju-shared) for Object Oriented Javascript and utils
+* [ju-mvc](https://github.com/hulilabs/ju-mvc) for dynamic webapps
+* [ju-components](https://github.com/hulilabs/ju-components) for web components development

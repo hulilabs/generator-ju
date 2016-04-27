@@ -17,23 +17,26 @@
  *           however, explanatory comments are reliable :p
  */
 define([
-            'ju-components/base'
-        ],
-        function(
-            BaseComponent
-        ) {
+        'lib/vendor/mustache.js/mustache',
+        'ju-components/base',
+        'ju-components/resource/lazy-load-helper'
+    ],
+    function(
+        Mustache,
+        BaseComponent,
+        LazyLoadHelper
+    ) {
 
     'use strict';
 
+    var MAIN_VIEW = 'landing/component';
+
     var RESOURCE_MAP = {
         template : [
-            // 'path/to/template'
+            MAIN_VIEW
         ],
         cssFile : [
             // 'path/to/css/file'
-        ],
-        l10n : [
-            // 'l10n_key'
         ]
     };
 
@@ -49,7 +52,7 @@ define([
         */
     };
 
-    var BasicComponent1 = BaseComponent.extend({
+    var BasicComponent = BaseComponent.extend({
         /**
          * Constructor
          *
@@ -73,17 +76,20 @@ define([
          * Commonly used to setup the component's markup
          */
         configureComponent : function() {
-            var dummyMarkup = '<h1 class="example-header">Nihao Ju!</h1>';
-            dummyMarkup += '<h2 class="example-header-2">' + this.opts.customizableLabel + '</h2>';
-            this.appendToView(dummyMarkup);
+            var mainView = LazyLoadHelper.getTemplate(MAIN_VIEW),
+                viewMarkup = Mustache.render(mainView, {
+                    customizableText : this.opts.customizableLabel
+                });
+
+            this.appendToView(viewMarkup);
         }
 
     });
 
-    BasicComponent1.classMembers({
+    BasicComponent.classMembers({
         // add 'static' class members here
         // i.e. can be accessed from the class definition without an instance
     });
 
-    return BasicComponent1;
+    return BasicComponent;
 });

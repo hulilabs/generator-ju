@@ -8,14 +8,14 @@ module.exports = generators.Base.extend({
     },
 
     prompting : {
-        appName : function (argument) {
+        appName : function() {
             var done = this.async();
             this.prompt({
-              type    : 'input',
-              name    : 'name',
+              type : 'input',
+              name : 'name',
               message : 'What\'s your app name?',
               default : 'ju-app'
-            }, function (answers) {
+            }, function(answers) {
                 this.appname = answers.name;
               done();
             }.bind(this));
@@ -23,7 +23,7 @@ module.exports = generators.Base.extend({
     },
 
     writing : {
-        app : function () {
+        app : function() {
             // copies the main app skeleton into a folder named this.appname
             log('copying app skeleton into ' + this.destinationPath(this.appname));
             this.directory('base-skeleton', this.appname);
@@ -36,7 +36,7 @@ module.exports = generators.Base.extend({
     },
 
     install : {
-        ju : function () {
+        ju : function() {
             log('installing bower dependencies');
             log('reading bower file from ' + this.destinationPath('resource/'));
             this.bowerInstall(null, {cwd : this.destinationPath('resource/')});

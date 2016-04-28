@@ -41,5 +41,17 @@ module.exports = generators.Base.extend({
             log('reading bower file from ' + this.destinationPath('resource/'));
             this.bowerInstall(null, {cwd : this.destinationPath('resource/')});
         }
+    },
+
+    end : {
+        nextSteps : function() {
+            this.log();
+            this.log();
+            log('DONE');
+            log('you may want to take a look into:');
+            log('generated component: ' + this.destinationPath('public/js/app/modules/landing/component.js'));
+            log('available routes: ' + this.destinationPath('public/js/app/routes.js'));
+            log('app boostrap: ' + this.destinationPath('public/js/app/bootstrap.js'));
+        }
     }
 });

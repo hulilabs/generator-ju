@@ -1,5 +1,6 @@
 var _s = require('underscore.string'),
-    generators = require('yeoman-generator');
+    generators = require('yeoman-generator'),
+    log = require('../logger');
 
 /**
  * 1.Trims the `componentPath` string
@@ -9,6 +10,11 @@ var _s = require('underscore.string'),
  * @return {String}               [description]
  */
 var _cleanComponentPath = function(componentPath) {
+    // empty string, does nothing
+    if (componentPath.length === 0) {
+        return componentPath;
+    }
+
     var cleanComponentPath = _s.trim(componentPath);
     // prevents leading /
     if (_s.startsWith(cleanComponentPath, '/')) {
@@ -91,7 +97,7 @@ module.exports = generators.Base.extend({
     writing : {
         component : function() {
             // copies the main app skeleton into a folder named this.appname
-            this.log('JuGenerator: creating component at ' + this.componentPath);
+            log('creating component at ' + this.componentPath);
             this.fs.copyTpl(
                 this.templatePath('component.js'),
                 this.componentPath,

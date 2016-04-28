@@ -1,7 +1,8 @@
-var generators = require('yeoman-generator');
+var generators = require('yeoman-generator'),
+    log = require('../logger');
 
 module.exports = generators.Base.extend({
-    
+
     constructor : function () {
         generators.Base.apply(this, arguments);
     },
@@ -24,7 +25,7 @@ module.exports = generators.Base.extend({
     writing : {
         app : function () {
             // copies the main app skeleton into a folder named this.appname
-            console.log('JuGenerator: copying app skeleton into ' + this.destinationPath(this.appname));
+            log('copying app skeleton into ' + this.destinationPath(this.appname));
             this.directory('base-skeleton', this.appname);
 
             // sets destination root to the provided app name
@@ -36,8 +37,8 @@ module.exports = generators.Base.extend({
 
     install : {
         ju : function () {
-            console.log('JuGenerator: installing bower dependencies');
-            console.log('JuGenerator: reading bower file from ' + this.destinationPath('resource/'));
+            log('installing bower dependencies');
+            log('reading bower file from ' + this.destinationPath('resource/'));
             this.bowerInstall(null, {cwd : this.destinationPath('resource/')});
         }
     }

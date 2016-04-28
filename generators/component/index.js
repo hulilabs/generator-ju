@@ -1,4 +1,36 @@
-var generators = require('yeoman-generator');
+var _s = require('underscore.string'),
+    generators = require('yeoman-generator');
+
+/**
+ * 1.Trims the `componentPath` string
+ * 2.Removes leading /
+ * 3.Adds / to the end (if not provided)
+ * @param  {String} componentPath processed string
+ * @return {String}               [description]
+ */
+var _cleanComponentPath = function(componentPath) {
+    var cleanComponentPath = _s.trim(componentPath);
+    // prevents leading /
+    if (_s.startsWith(cleanComponentPath, '/')) {
+        cleanComponentPath = cleanComponentPath.substring(1);
+    }
+
+    if (!_s.endsWith(cleanComponentPath, '/')) {
+        cleanComponentPath += '/';
+    }
+
+    return cleanComponentPath;
+};
+
+var _ensureJsExtension = function(filename) {
+    var processedFilename = _s.trim(filename);
+
+    if (!_s.endsWith(processedFilename, '.js')) {
+        processedFilename += '.js';
+    }
+
+    return processedFilename;
+};
 
 module.exports = generators.Base.extend({
 
@@ -44,7 +76,10 @@ module.exports = generators.Base.extend({
             }
             ], function(answers) {
                 this.componentName = answers.name;
-                this.componentPath = this.destinationPath(answers.path + answers.filename);
+
+                // removes unwanted characters to make sure provided path can be used
+                var cleanComponentPath = _cleanComponentPath(answers.path);
+                this.componentPath = this.destinationPath(cleanComponentPath + _ensureJsExtension(answers.filename));
 
                 this.needsFetch = answers.needsFetch;
                 this.needsSave = answers.needsSave;

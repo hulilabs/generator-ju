@@ -1,7 +1,10 @@
 # generator-ju
 Easily generate Ju webapps and components using [Yo](https://www.npmjs.com/package/yo)
 
-## Creating a new project
+## Getting started
+From zero to _nihao world_ in a few steps.
+
+### Creating a new project
 * [Install yo](https://www.npmjs.com/package/yo#usage)
 * Install this generator
 ```
@@ -12,7 +15,7 @@ npm install -g generator-ju
 yo ju
 ```
 
-## Running your project using docker
+#### Running your project using docker
 We provide a [docker](https://www.docker.com/) container with [nginx](https://www.nginx.com/) webserver, as it is required to load resources (like HTML files) from the browser. To use it:
 
 1. Install [docker](https://docs.docker.com/engine/installation/)
@@ -22,12 +25,19 @@ We provide a [docker](https://www.docker.com/) container with [nginx](https://ww
 docker-compose up -d
 ```
 
-## Getting started
+#### Testing the generated app
 If the installation was fine, you can go to [http://localhost:8080](http://localhost:8080) and you should see a message saying "nihao Ju!".
 
 Please note that you can also test your app by opening the `index.html` file located at `your_project_root/public`, but you won't be able to dynamically load resources.
+
+#### Next steps
 
 Refer to the Github repositories of Ju framework for details about app development:
 * [ju-shared](https://github.com/hulilabs/ju-shared) for Object Oriented Javascript and utils
 * [ju-mvc](https://github.com/hulilabs/ju-mvc) for dynamic webapps
 * [ju-components](https://github.com/hulilabs/ju-components) for web components development
+
+### Generating Ju components
+Run `yo ju:components` and answers all the questions.
+
+You will obtain a basic component that can handle resources and remote data.

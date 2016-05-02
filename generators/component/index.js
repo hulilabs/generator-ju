@@ -1,6 +1,6 @@
 var _s = require('underscore.string'),
     generators = require('yeoman-generator'),
-    log = require('../../common/logger');;
+    log = require('../../common/logger');
 
 /**
  * 1.Trims the `componentPath` string

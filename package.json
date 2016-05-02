@@ -11,7 +11,9 @@
   },
   "homepage": "https://github.com/hulilabs/generator-ju#readme",
   "files": [
-    "generators/app"
+    "generators/app",
+    "generators/component",
+    "logger.js"
   ],
   "keywords": [
     "yeoman-generator"

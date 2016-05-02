@@ -1,5 +1,5 @@
 var generators = require('yeoman-generator'),
-    log = require('../logger');
+    log = require('../../common/logger');
 
 module.exports = generators.Base.extend({
 

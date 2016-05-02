@@ -13,7 +13,7 @@
   "files": [
     "generators/app",
     "generators/component",
-    "logger.js"
+    "generators/ogger.js"
   ],
   "keywords": [
     "yeoman-generator"

@@ -41,3 +41,8 @@ Refer to the Github repositories of Ju framework for details about app developme
 Run `yo ju:components` and answers all the questions.
 
 You will obtain a basic component that can handle resources and remote data.
+
+### Generating Ju Object-Oriented Javascript modules
+Run `yo ju:module` and answers all the questions.
+
+You will obtain a class like structure, either using plain prototypes (module), a class with inheritance, singleton and static members or everything plus observer pattern.

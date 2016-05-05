@@ -2,6 +2,8 @@ var _s = require('underscore.string'),
     generators = require('yeoman-generator'),
     log = require('../../common/logger');
 
+// TODO: duplicated methods on component generator
+
 /**
  * 1.Trims the `componentPath` string
  * 2.Removes leading /

@@ -11,8 +11,7 @@
   },
   "homepage": "https://github.com/hulilabs/generator-ju#readme",
   "files": [
-    "generators/app",
-    "generators/component",
+    "generators",
     "common"
   ],
   "keywords": [

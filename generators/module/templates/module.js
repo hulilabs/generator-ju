@@ -13,7 +13,6 @@
  * @file <%= name %>
  * @requires ju-shared/logger
  *
- * @extends ju-shared/class
  */
 define([
         'ju-shared/logger'

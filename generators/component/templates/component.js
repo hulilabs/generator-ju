@@ -74,7 +74,7 @@ define([
 
             this.addResources(RESOURCE_MAP);
 
-            this.childrenDef = CHILDREN_DEFINITION;
+            this.setChildrenDefinition(CHILDREN_DEFINITION);
         },
 
         /**

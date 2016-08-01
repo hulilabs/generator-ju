@@ -52,3 +52,8 @@ You will obtain a class like structure, either using plain prototypes (module), 
 Run `yo ju:model` and specify the Model Definition name, the file name and path, and the middleware you wish to add (AJAX and WebStorage providers are avilable now, there are more in the way).
 
 You will obtain a Model definition, that you can modify to inject middleware to every API method, to instatiate it later and perform data operations.
+
+### Generating README files
+Run `yo ju:readme` and follow the steps to generate a README markdown file for your library (:
+
+It will include common sections, like getting started, references and all the stuff you may want to make a good documentation

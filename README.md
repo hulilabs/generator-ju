@@ -36,6 +36,7 @@ Refer to the Github repositories of Ju framework for details about app developme
 * [ju-shared](https://github.com/hulilabs/ju-shared) for Object Oriented Javascript and utils
 * [ju-mvc](https://github.com/hulilabs/ju-mvc) for dynamic webapps
 * [ju-components](https://github.com/hulilabs/ju-components) for web components development
+* [ju-model](https://github.com/hulilabs/ju-model) for progressive data management
 
 ### Generating Ju components
 Run `yo ju:components` and answers all the questions.
@@ -46,3 +47,8 @@ You will obtain a basic component that can handle resources and remote data.
 Run `yo ju:module` and answers all the questions.
 
 You will obtain a class like structure, either using plain prototypes (module), a class with inheritance, singleton and static members or everything plus observer pattern.
+
+### Generating Ju Models
+Run `yo ju:model` and specify the Model Definition name, the file name and path, and the middleware you wish to add (AJAX and WebStorage providers are avilable now, there are more in the way).
+
+You will obtain a Model definition, that you can modify to inject middleware to every API method, to instatiate it later and perform data operations.
